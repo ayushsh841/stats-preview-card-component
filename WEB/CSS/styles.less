@@ -19,6 +19,14 @@ body {
   margin-top: 10%;
 }
 
+.overlay {
+  background-color: @soft-violet;
+  opacity: 0.25;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+
 .card {
   background: @desaturated-blue;
   max-width: 850px;
@@ -33,16 +41,15 @@ body {
   display: flex;
 }
 
-.h2-text {
-  font-size: xx-large;
+.header-text {
   color: @white;
 }
 
-.h2-text, .stats-value {
+.header-text, .stats-value {
   font-weight: 700;
 }
 
-.h2-text span {
+.header-text span {
     color: @soft-violet;
 }
 
@@ -52,6 +59,7 @@ body {
 
 .image-wrapper {
   width: 100%;
+  background-color: @soft-violet;
   height: inherit;
   img {
     width: 100%;
@@ -59,7 +67,7 @@ body {
   }
 }
 
-.h2-text, .p-text,
+.header-text, .p-text,
 .stats-container {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 1.3rem;
@@ -87,9 +95,25 @@ body {
   color: @transparent-white-primary;
 }
 
+#image-mobile {
+  display: none;
+}
+
+#image-desktop {
+  display: block;
+}
+
 @media only screen and (max-width: 599px) {
   .main-section {
     margin-top: 20%;
+  }
+
+  #image-mobile {
+    display: block;
+  }
+
+  #image-desktop {
+    display: none;
   }
 
   .card {
@@ -101,7 +125,7 @@ body {
     padding: 1rem;
   }
 
-  .h2-text {
+  .header-text {
     font-size: x-large;
     text-align: center;
   }
